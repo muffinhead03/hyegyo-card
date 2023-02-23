@@ -1,0 +1,78 @@
+body {
+    background-color: lightskyblue;
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    /* 여기서 container, card-address 이런거는 앞에 <index.html>에서 <div class="container">열에서 주소를 가져온 것이다. */
+    width: 23rem;
+    background-color: rgba(62, 168, 62, 0.5);
+    /* a는 투명도이다.rgb조절해서 원하는 색깔 찾으면 됨 */
+    border-radius: 0.5rem;
+    /* ctrl+/누르면 그 한줄이 주석처리가 된다 */
+}
+.card-address {
+    font-size: 0.8rem;
+}
+hr{
+    border: solid lpx white;
+}
+.name {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.job {
+    font-size: 0.9rem;
+}
+.profile-img-container {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact {
+    width: 6.5rem;
+    height: 6.5rem;
+    background-color: #ffe330;
+    border-radius:70%;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.introduction-container hr {
+    width: 15px;
+}
+.introduction {
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tags {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+.introduction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
