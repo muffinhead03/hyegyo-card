@@ -7,6 +7,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 .container {
     /* 여기서 container, card-address 이런거는 앞에 <index.html>에서 <div class="container">열에서 주소를 가져온 것이다. */
@@ -15,12 +16,17 @@ body {
     /* a는 투명도이다.rgb조절해서 원하는 색깔 찾으면 됨 */
     border-radius: 0.5rem;
     /* ctrl+/누르면 그 한줄이 주석처리가 된다 */
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
 }
 .card-address {
     font-size: 0.8rem;
 }
 hr{
     border: solid lpx white;
+    margin: 1.3rem 0 1.3rem 0;
+    /* 위의 margin은 약간 배경같은 거임 */
 }
 .name {
     font-weight: 600;
@@ -33,7 +39,7 @@ hr{
     width: 15rem;
     height: 15rem;
     border-radius: 70%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .profile-img {
     width: 100%;
@@ -52,6 +58,10 @@ hr{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    /* 위 상태만 두고 보면 배치가 마음대로 된 상태이므로, right:0;이랑 bottom: -.15rem은 각각 오른쪽 붙이겠따랑 아래로 1.5rem만큼 내리겠따 */
+    right: 0;
+    bottom: -1.5rem;
 }
 .introduction-container hr {
     width: 15px;
@@ -66,6 +76,7 @@ hr{
     font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0 3rem 0;
 }
 html {
     width: 100%;
@@ -75,4 +86,25 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.profile-container {
+    margin: 2rem 0 2rem 0;
+    position: relative;
+}
+.contact i {
+    margin-bottom: 0.5rem;
+}
+video {
+    /* video는 클래스가 아니라 태그이므로 .을 앞에 찍으면 안된다. */
+    width: 100%; 
+    /* 컨테이너 크기로 사이즈 맞추기 */
+    height: 100%;
+    /* 컨테이너 크기로 사이즈 맞추기 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    /* 컨테이너 가득 채우기 */
+    z-index: -1;
+    /* 다른 요소보다 아래에 있도록 */
 }
